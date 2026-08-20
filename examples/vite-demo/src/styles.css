@@ -1,0 +1,88 @@
+/* Demo page styles — minimal, not part of the package */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  background: #0a1426;
+  color: #d9e6ff;
+  min-height: 100vh;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid rgba(140, 168, 208, 0.2);
+  background: rgba(6, 13, 26, 0.6);
+  flex-shrink: 0;
+}
+.tab {
+  padding: 12px 20px;
+  background: transparent;
+  border: none;
+  color: #8ca8d0;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+.tab:hover {
+  color: #d9e6ff;
+  background: rgba(24, 144, 255, 0.05);
+}
+.tab.active {
+  color: #1890ff;
+  border-bottom-color: #1890ff;
+  background: rgba(24, 144, 255, 0.08);
+}
+.stage {
+  flex: 1 1 auto;
+  display: flex;
+  min-height: 0;
+}
+.stage > * {
+  flex: 1 1 auto;
+}
+.toolbar {
+  display: flex;
+  gap: 8px;
+  padding: 10px 16px;
+  border-bottom: 1px solid rgba(140, 168, 208, 0.15);
+  background: rgba(6, 13, 26, 0.4);
+  flex-wrap: wrap;
+  align-items: center;
+}
+.toolbar label {
+  font-size: 12px;
+  color: #8ca8d0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.toolbar select,
+.toolbar button {
+  background: rgba(24, 144, 255, 0.1);
+  color: #1890ff;
+  border: 1px solid rgba(24, 144, 255, 0.3);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.toolbar button:hover,
+.toolbar select:hover {
+  background: rgba(24, 144, 255, 0.2);
+}
+.demo-meta {
+  padding: 8px 16px;
+  font-size: 11px;
+  color: #5a7da8;
+  background: rgba(6, 13, 26, 0.3);
+  border-top: 1px solid rgba(140, 168, 208, 0.1);
+}

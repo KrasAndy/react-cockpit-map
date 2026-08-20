@@ -1,0 +1,61 @@
+/* === react-cockpit-map leaflet overrides ===
+ * 暗色 cockpit 风格 + tile 灰阶降饱和覆盖
+ * 通过 inline 注入 + dark theme class 触发
+ * 来源:原项目 leaflet-overrides.css (63 行)
+ */
+
+/* popup 暗色 cockpit 风格 */
+:global(.leaflet-popup-content-wrapper),
+:global(.leaflet-popup-tip) {
+  background: rgba(6, 13, 26, 0.96) !important;
+  color: #d9e6ff !important;
+  border-radius: 6px !important;
+  border: 1px solid rgba(140, 168, 208, 0.25) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.6) !important;
+  font-family: var(--font-family-base, system-ui) !important;
+}
+:global(.leaflet-popup-content) {
+  margin: 10px 12px !important;
+  font-size: 11px !important;
+  line-height: 1.4 !important;
+  color: #d9e6ff !important;
+}
+:global(.leaflet-popup-close-button) {
+  color: #8ca8d0 !important;
+}
+:global(.leaflet-popup-close-button:hover) {
+  color: #fff !important;
+}
+
+/* attribution 暗色 */
+:global(.leaflet-control-attribution) {
+  background: rgba(6, 13, 26, 0.85) !important;
+  color: #8ca8d0 !important;
+}
+:global(.leaflet-control-attribution a) {
+  color: #1890ff !important;
+}
+
+/* zoom control 暗色 */
+:global(.leaflet-control-zoom a) {
+  background: rgba(6, 13, 26, 0.92) !important;
+  color: #d9e6ff !important;
+  border-color: rgba(140, 168, 208, 0.3) !important;
+}
+:global(.leaflet-control-zoom a:hover) {
+  background: rgba(24, 144, 255, 0.3) !important;
+  color: #fff !important;
+}
+
+/* light 主题:瓦片降饱和(橙色公路 → 灰色) */
+:global(.leaflet-container) .leaflet-tile {
+  filter: grayscale(0.85) brightness(1.05) contrast(0.95);
+}
+
+/* dark 主题:瓦片灰阶压暗 */
+:global(.leaflet-container.map-theme-dark) .leaflet-tile {
+  filter: grayscale(0.85) brightness(0.5) contrast(1.05) invert(0.92) hue-rotate(180deg);
+}
+:global(.leaflet-container.map-theme-dark) {
+  background: #0a1426;
+}

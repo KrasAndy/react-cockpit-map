@@ -1,0 +1,72 @@
+{
+  "name": "@krasandy/react-cockpit-map",
+  "version": "0.1.0",
+  "description": "React 18 + Leaflet map component with multi-CDN tile fallback, dark cockpit style, and 17 industrial device SVG icons. Born from overseas-deployment pain (Netlify + 高德 DNS failure, R46 inline-CSS fix).",
+  "type": "module",
+  "main": "./dist/react-cockpit-map.cjs.js",
+  "module": "./dist/react-cockpit-map.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/react-cockpit-map.es.js",
+      "require": "./dist/react-cockpit-map.cjs.js",
+      "default": "./dist/react-cockpit-map.es.js"
+    },
+    "./styles.css": "./dist/style.css"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "dev": "vite",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "verify": "node scripts/verify-build.mjs",
+    "prepublishOnly": "npm run build && npm run verify"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "leaflet": "^1.9.0"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.12",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.2",
+    "playwright-core": "^1.62.1",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.8"
+  },
+  "keywords": [
+    "react",
+    "leaflet",
+    "map",
+    "gis",
+    "cockpit",
+    "industrial",
+    "tile-fallback",
+    "dark-theme",
+    "iot",
+    "monitoring"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KrasAndy/react-cockpit-map.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KrasAndy/react-cockpit-map/issues"
+  },
+  "homepage": "https://github.com/KrasAndy/react-cockpit-map#readme"
+}

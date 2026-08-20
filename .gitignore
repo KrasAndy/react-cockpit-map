@@ -1,0 +1,34 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Build output
+dist
+*.tsbuildinfo
+
+# Test output
+coverage
+.nyc_output
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+
+# OS
+Thumbs.db
+
+# Examples build cache
+examples/vite-demo/node_modules
+examples/vite-demo/dist
+examples/screenshots
+*.tgz
+
+# Misc
+.eslintcache
