@@ -1,7 +1,7 @@
 {
   "name": "@krasandy/react-cockpit-map",
   "version": "0.1.0",
-  "description": "React 18 + Leaflet map component with multi-CDN tile fallback, dark cockpit style, and 17 industrial device SVG icons. Born from overseas-deployment pain (Netlify + 高德 DNS failure, R46 inline-CSS fix).",
+  "description": "React 18 + Leaflet map component with multi-CDN tile fallback, dark cockpit style, and 17 industrial device SVG icons. Born from overseas-deployment pain (CDN tile DNS failure, R46 inline-CSS fix).",
   "type": "module",
   "main": "./dist/react-cockpit-map.cjs.js",
   "module": "./dist/react-cockpit-map.es.js",
@@ -33,9 +33,7 @@
     "react-dom": "^18.0.0",
     "leaflet": "^1.9.0"
   },
-  "dependencies": {
-    "leaflet": "^1.9.4"
-  },
+  "//": "leaflet moved to peerDependencies only - avoids npm ls showing 2 copies",
   "devDependencies": {
     "@types/leaflet": "^1.9.12",
     "@types/react": "^18.3.0",
