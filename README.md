@@ -220,7 +220,7 @@ const markers: Marker[] = [
 
 ### 7 个真实使用场景
 
-从大庆油田 AI 智能监查平台 Demo 提炼,经过 7 个不同页面验证:
+Derived from production React dashboard experience, validated across 7 different page layouts:
 
 | # | 场景 | 关键 props |
 |---|------|-----------|
